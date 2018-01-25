@@ -39,11 +39,12 @@ app.on("ready", () => {
   });
 
   mainWindow.loadURL(
-    url.format({
-      pathname: path.join(__dirname, "app.html"),
-      protocol: "file:",
-      slashes: true
-    })
+    // url.format({
+    //   pathname: path.join(__dirname, "app.html"),
+    //   protocol: "file:",
+    //   slashes: true
+    // })
+    'https://fierce-bayou-35151.herokuapp.com/'
   );
 
   if (env.name === "development") {
