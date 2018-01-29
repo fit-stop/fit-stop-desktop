@@ -36,6 +36,9 @@ if (env.name !== "production") {
 
 let mainWindow;
 let startWorkout;
+let endWorkout;
+let logIn;
+let logOut;
 
 app.on("ready", () => {
   setApplicationMenu();
@@ -63,6 +66,18 @@ app.on("ready", () => {
   startWorkout = () => {
     mainWindow.webContents.send('workout:start');
   }
+
+  endWorkout = () => {
+    mainWindow.webContents.send('workout:end');
+  }
+
+  logIn = () => {
+    mainWindow.webContents.send('user:log-out');
+  }
+
+  logOut = () => {
+    mainWindow.webContents.send('user:log-in');
+  }
 });
 
 app.on("window-all-closed", () => {
@@ -70,3 +85,6 @@ app.on("window-all-closed", () => {
 });
 
 export { startWorkout };
+export { endWorkout };
+export { logIn };
+export { logOut };
