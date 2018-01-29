@@ -69,8 +69,4 @@ app.on("window-all-closed", () => {
   app.quit();
 });
 
-app.on('browser-window-blur', () => {
-  mainWindow.webContents.send('workout:start');
-});
-
 export { startWorkout };
