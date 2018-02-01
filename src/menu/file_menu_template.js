@@ -16,6 +16,13 @@ export const fileMenuTemplate = {
       }
     },
     {
+      label: "Pause Workout",
+      accelerator: "Command+P",
+      click: () => {
+        // TODO: find way to pause timer
+      }
+    },
+    {
       label: "End Workout",
       accelerator: "Command+E",
       click: () => {
