@@ -55,8 +55,8 @@ app.on("ready", () => {
     //   protocol: "file:",
     //   slashes: true
     // })
-    // 'https://fierce-bayou-35151.herokuapp.com/'
-    `http://localhost:3000/`
+    'https://fierce-bayou-35151.herokuapp.com/'
+    // `http://localhost:3000/`
   );
   
 
