@@ -1,5 +1,6 @@
 import { app, BrowserWindow, webContents, shell } from "electron";
 import { startWorkout } from '../background.js';
+import { pauseWorkout } from '../background.js';
 import { endWorkout } from '../background.js';
 
 export const fileMenuTemplate = {
@@ -19,7 +20,7 @@ export const fileMenuTemplate = {
       label: "Pause Workout",
       accelerator: "Command+P",
       click: () => {
-        // TODO: find way to pause timer
+        pauseWorkout();
       }
     },
     {

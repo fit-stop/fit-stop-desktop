@@ -36,6 +36,7 @@ if (env.name !== "production") {
 
 let mainWindow;
 let startWorkout;
+let pauseWorkout;
 let endWorkout;
 let logIn;
 let logOut;
@@ -54,8 +55,8 @@ app.on("ready", () => {
     //   protocol: "file:",
     //   slashes: true
     // })
-    'https://fierce-bayou-35151.herokuapp.com/'
-    // `http://localhost:3000/`
+    // 'https://fierce-bayou-35151.herokuapp.com/'
+    `http://localhost:3000/`
   );
   
 
@@ -65,6 +66,10 @@ app.on("ready", () => {
 
   startWorkout = () => {
     mainWindow.webContents.send('workout:start');
+  }
+
+  pauseWorkout = () => {
+    mainWindow.webContents.send('workout:pause');
   }
 
   endWorkout = () => {
@@ -85,6 +90,7 @@ app.on("window-all-closed", () => {
 });
 
 export { startWorkout };
+export { pauseWorkout };
 export { endWorkout };
 export { logIn };
 export { logOut };
